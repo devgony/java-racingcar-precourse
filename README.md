@@ -5,3 +5,17 @@
 
 ## 과제 제출 과정
 * [과제 제출 방법](https://github.com/next-step/nextstep-docs/tree/master/precourse)
+
+## Todo
+- [ ] feat: architecture design - view(input, output), domain(), controller(Application)
+- [ ] test: add case for Spot: {defaultSpotShouldBe1, shouldMoveOnlyIfMoreThan4}
+- [ ] feat: implement Spot {int at, Spot move()}
+- [ ] test: add case for Car {defaultCar, carNameShouldBeBetween1and5}
+- [ ] feat: implement Car {String name, Spot spot, void validate() throw E}
+- [ ] test: add case for Cars: {AddCarIncreaseLength, shouldYieldWinner}
+- [ ] feat: implement first class collection Cars {List<Car> car, Cars addCar(Car), Car yieldWinner()}
+- [ ] feat: implement Input.scan
+- [ ] test: add case for Input: {ShouldParseStringTo3Cars}
+- [ ] feat: implement Input {Cars parseCar(String)}
+- [ ] feat: implement generateRandom()
+- [ ] feat: implement Strategy pattern
