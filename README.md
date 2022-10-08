@@ -13,7 +13,7 @@
 
 - [x] feat: architecture design - view(input, output), domain(), controller(Application)
 - [x] test: add case for Spot: {defaultSpotShouldBe1, shouldMove1}
-- [ ] feat: implement Spot {int at, Spot move()}
+- [x] feat: implement Spot {int at, Spot move()}
 - [ ] test: add case for Car {defaultCar, carNameShouldBeBetween1and5}
 - [ ] feat: implement Car {String name, Spot spot, void validate() throw E}
 - [ ] test: add case for Cars: {AddCarIncreaseLength, shouldYieldWinner}
