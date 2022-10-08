@@ -15,7 +15,7 @@
 - [x] test: add case for Spot: {defaultSpotShouldBe1, shouldMove1}
 - [x] feat: implement Spot {int at, Spot move()}
 - [x] test: add case for Car {defaultCar, carNameShouldBeBetween1and5}
-- [ ] feat: implement Car {String name, Spot spot, void validate() throw E}
+- [x] feat: implement Car {String name, Spot spot, void validate(String) throw E}
 - [ ] test: add case for Cars: {AddCarIncreaseLength, shouldYieldWinner}
 - [ ] feat: implement first class collection Cars {List<Car> car, Cars addCar(Car), Car yieldWinner()}
 - [ ] feat: implement Input.scan
