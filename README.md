@@ -12,7 +12,7 @@
 ## Todo
 
 - [x] feat: architecture design - view(input, output), domain(), controller(Application)
-- [ ] test: add case for Spot: {defaultSpotShouldBe1, shouldMoveOnlyIfMoreThan4}
+- [x] test: add case for Spot: {defaultSpotShouldBe1, shouldMove1}
 - [ ] feat: implement Spot {int at, Spot move()}
 - [ ] test: add case for Car {defaultCar, carNameShouldBeBetween1and5}
 - [ ] feat: implement Car {String name, Spot spot, void validate() throw E}
