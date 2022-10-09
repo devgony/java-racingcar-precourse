@@ -44,4 +44,8 @@ public class Spot {
         Spot spot = (Spot) o;
         return at == spot.at;
     }
+
+    public int at() {
+        return this.at;
+    }
 }

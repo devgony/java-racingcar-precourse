@@ -60,4 +60,8 @@ public class Car {
     public void move() {
         this.spot = this.spot.move();
     }
+
+    public String name() {
+        return this.name;
+    }
 }
