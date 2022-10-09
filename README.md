@@ -26,3 +26,4 @@
 - [x] feat: implement Race {Cars cars, RollStrategy, rollStrategy, Cars enrollCars(String[] names), RollResult roll(Car)
   }
 - [x] feat: implement Application logic
+- [x] fix: modify Input.parseCars -> parseNames to return String[]

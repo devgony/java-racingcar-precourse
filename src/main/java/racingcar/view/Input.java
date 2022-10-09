@@ -1,8 +1,5 @@
 package racingcar.view;
 
-import racingcar.model.Car;
-import racingcar.model.Cars;
-
 import static camp.nextstep.edu.missionutils.Console.readLine;
 
 public class Input {
@@ -12,13 +9,7 @@ public class Input {
         return readLine();
     }
 
-    public static Cars parseCars(String scanned) {
-        String[] names = scanned.split("\\s*,\\s*");
-        Cars cars = new Cars();
-        for (String name : names) {
-            cars.add(new Car(name));
-
-        }
-        return cars;
+    public static String[] parseNames(String scanned) {
+        return scanned.split("\\s*,\\s*");
     }
 }
