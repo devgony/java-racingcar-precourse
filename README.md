@@ -19,7 +19,7 @@
 - [x] test: add case for Cars: {AddCar, shouldYieldWinner, shouldYieldTwoWinnersWithIdenticalSpot}
 - [x] feat: implement first class collection Cars {List<Car> car, Cars addCar(Car), Car yieldWinner()}
 - [x] test: add case for Input: {parseCars, IllegalArgumentInputThrowException}
-- [ ] feat: implement Input.scan
+- [x] feat: implement Input.{String scan(), Cars parseCars()}
 - [ ] test: add case for Input: {ShouldParseStringTo3Cars}
 - [ ] feat: implement Input {Cars parseCar(String)}
 - [ ] feat: implement generateRandom()
