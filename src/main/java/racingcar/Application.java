@@ -12,6 +12,10 @@ public class Application {
         int tryNumber = Input.scanTryNumber();
         Race race = new Race(new RandomStrategy());
         race.enrollCars(names);
+        for (int i = 0; i < tryNumber; i++) {
+            race.rolls();
+            Output.printCars(race.cars());
+        }
         Cars winners = race.yieldWinner();
         Output.printWinners(winners);
     }

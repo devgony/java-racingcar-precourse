@@ -1,5 +1,8 @@
 package racingcar.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Race {
     private final Cars cars;
     private final RollStrategy rollStrategy;
@@ -18,5 +21,19 @@ public class Race {
 
     public RollResult roll(Car car) {
         return this.rollStrategy.roll(car);
+    }
+
+    public Cars yieldWinner() {
+        return this.cars.yieldWinner();
+    }
+
+    public void rolls() {
+        for (Car car : this.cars) {
+            roll(car);
+        }
+    }
+
+    public Cars cars() {
+        return this.cars;
     }
 }

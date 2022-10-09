@@ -1,11 +1,8 @@
 package racingcar.model;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Objects;
+import java.util.*;
 
-public class Cars {
+public class Cars implements Iterable<Car> {
     private List<Car> cars;
 
     public Cars(List<Car> cars) {
@@ -76,5 +73,10 @@ public class Cars {
             return ",";
         }
         return "";
+    }
+
+    @Override
+    public Iterator<Car> iterator() {
+        return this.cars.iterator();
     }
 }
