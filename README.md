@@ -9,6 +9,30 @@
 
 * [과제 제출 방법](https://github.com/next-step/nextstep-docs/tree/master/precourse)
 
+## Implemented Result
+
+```
+경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)
+henry, berni, jeong
+시도할 회수
+3
+
+실행 결과
+henry: --
+berni: --
+jeong: -
+
+henry: --
+berni: --
+jeong: -
+
+henry: ---
+berni: ---
+jeong: --
+
+최종 우승자: henry,berni
+```
+
 ## Todo
 
 - [x] feat: architecture design - view(input, output), domain(), controller(Application)
@@ -31,4 +55,4 @@
 - [x] feat: implement Cars {String names(), String separator(ListIterator<Car>)}
 - [x] feat: implement iterator at Cars, Race{rolls(), Cars yieldWinner()}
 - [x] feat: implement Output.printCars(Cars)
-- 
+- [x] feat: implement Output.track() to draw tracks
