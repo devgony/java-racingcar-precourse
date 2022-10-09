@@ -21,5 +21,7 @@
 - [x] test: add case for Input: {parseCars, IllegalArgumentInputThrowException}
 - [x] feat: implement Input.{String scan(), Cars parseCars()}
 - [x] fix: modify default Spot.at from 0 to 1
+- [x] test: add case for Race: {createThreeCars, RollShouldMoveOrStay}
+- [ ] feat: implement Race {Cars cars, RollStrategy, rollStrategy, Cars enrollCars(String[] names)}
 - [ ] feat: implement generateRandom()
 - [ ] feat: implement Strategy pattern
