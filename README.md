@@ -20,7 +20,6 @@
 - [x] feat: implement first class collection Cars {List<Car> car, Cars addCar(Car), Car yieldWinner()}
 - [x] test: add case for Input: {parseCars, IllegalArgumentInputThrowException}
 - [x] feat: implement Input.{String scan(), Cars parseCars()}
-- [ ] test: add case for Input: {ShouldParseStringTo3Cars}
-- [ ] feat: implement Input {Cars parseCar(String)}
+- [x] fix: modify default Spot.at from 0 to 1
 - [ ] feat: implement generateRandom()
 - [ ] feat: implement Strategy pattern

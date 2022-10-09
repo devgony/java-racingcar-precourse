@@ -10,24 +10,24 @@ public class Spot {
     }
 
     public Spot() {
-        this(0);
+        this(1);
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Spot spot = (Spot) o;
-        return at == spot.at;
+    public boolean isFartherThan(Spot candidate) {
+        return this.at > candidate.at;
+    }
+
+    public boolean isAtIdenticalSpot(Spot maxSpot) {
+        return this.at == maxSpot.at;
+    }
+
+    public Spot move() {
+        return new Spot(this.at + 1);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(at);
-    }
-
-    public Spot move() {
-        return new Spot(this.at + 1);
     }
 
     @Override
@@ -37,11 +37,11 @@ public class Spot {
                 '}';
     }
 
-    public boolean isFartherThan(Spot candidate) {
-        return this.at > candidate.at;
-    }
-
-    public boolean isAtIdenticalSpot(Spot maxSpot) {
-        return this.at == maxSpot.at;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Spot spot = (Spot) o;
+        return at == spot.at;
     }
 }
