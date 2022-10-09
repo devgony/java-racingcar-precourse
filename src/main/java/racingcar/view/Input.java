@@ -19,6 +19,7 @@ public class Input {
     }
 
     public static int scanTryNumber() {
+        Output.println("시도할 회수");
         return parseInt(scan());
     }
 }
