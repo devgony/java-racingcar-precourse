@@ -1,6 +1,7 @@
 package racingcar.model;
 
 import org.junit.jupiter.api.Test;
+import racingcar.view.Input;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,5 +38,14 @@ public class CarsTest {
         Cars actual = cars.yieldWinner();
         Cars expected = new Cars(Arrays.asList(winner1, winner2));
         assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void ShouldConcatNamesWithComma() {
+        Cars cars = new Cars(Arrays.asList(new Car("a"), new Car("b"), new Car("c")));
+        String actual = cars.names();
+        String expected = "a,b,c";
+        assertThat(actual).isEqualTo(expected);
+
     }
 }
