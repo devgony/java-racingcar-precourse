@@ -1,6 +1,7 @@
 package racingcar.view;
 
 import static camp.nextstep.edu.missionutils.Console.readLine;
+import static java.lang.Integer.parseInt;
 
 public class Input {
 
@@ -11,5 +12,13 @@ public class Input {
 
     public static String[] parseNames(String scanned) {
         return scanned.split("\\s*,\\s*");
+    }
+
+    public static String[] scanNames() {
+        return parseNames(scan());
+    }
+
+    public static int scanTryNumber() {
+        return parseInt(scan());
     }
 }

@@ -8,8 +8,8 @@ import racingcar.view.Output;
 
 public class Application {
     public static void main(String[] args) {
-        String scanned = Input.scan();
-        String[] names = Input.parseNames(scanned);
+        String[] names = Input.scanNames();
+        int tryNumber = Input.scanTryNumber();
         Race race = new Race(new RandomStrategy());
         race.enrollCars(names);
         Cars winners = race.yieldWinner();
