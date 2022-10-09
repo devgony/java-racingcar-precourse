@@ -56,4 +56,8 @@ public class Car {
     public boolean isAtIdenticalSpot(Spot maxSpot) {
         return this.spot.isAtIdenticalSpot(maxSpot);
     }
+
+    public void move() {
+        this.spot = this.spot.move();
+    }
 }
