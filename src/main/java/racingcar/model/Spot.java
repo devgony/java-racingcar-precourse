@@ -3,7 +3,7 @@ package racingcar.model;
 import java.util.Objects;
 
 public class Spot {
-    int at;
+    private int at;
 
     public Spot(int at) {
         this.at = at;
@@ -28,5 +28,20 @@ public class Spot {
 
     public Spot move() {
         return new Spot(this.at + 1);
+    }
+
+    @Override
+    public String toString() {
+        return "Spot{" +
+                "at=" + at +
+                '}';
+    }
+
+    public boolean isFartherThan(Spot candidate) {
+        return this.at > candidate.at;
+    }
+
+    public boolean isAtIdenticalSpot(Spot maxSpot) {
+        return this.at == maxSpot.at;
     }
 }

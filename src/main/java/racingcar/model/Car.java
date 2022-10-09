@@ -36,4 +36,24 @@ public class Car {
     public int hashCode() {
         return Objects.hash(name, spot);
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "name='" + name + '\'' +
+                ", spot=" + spot +
+                '}';
+    }
+
+    public Spot spot() {
+        return this.spot;
+    }
+
+    public boolean isFasterThan(Spot maxSpot) {
+        return this.spot.isFartherThan(maxSpot);
+    }
+
+    public boolean isAtIdenticalSpot(Spot maxSpot) {
+        return this.spot.isAtIdenticalSpot(maxSpot);
+    }
 }
