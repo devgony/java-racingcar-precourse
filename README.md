@@ -25,5 +25,4 @@
 - [x] feat: implement interface RollStrategy, class {RandomStrategy, AlwaysWinStrategy}
 - [x] feat: implement Race {Cars cars, RollStrategy, rollStrategy, Cars enrollCars(String[] names), RollResult roll(Car)
   }
-- [ ] feat: implement generateRandom()
-- [ ] feat: implement Strategy pattern
+- [x] feat: implement Application logic
