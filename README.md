@@ -23,6 +23,7 @@
 - [x] fix: modify default Spot.at from 0 to 1
 - [x] test: add case for Race: {createThreeCars, RollShouldMoveOrStay}
 - [x] feat: implement interface RollStrategy, class {RandomStrategy, AlwaysWinStrategy}
-- [ ] feat: implement Race {Cars cars, RollStrategy, rollStrategy, Cars enrollCars(String[] names)}
+- [x] feat: implement Race {Cars cars, RollStrategy, rollStrategy, Cars enrollCars(String[] names), RollResult roll(Car)
+  }
 - [ ] feat: implement generateRandom()
 - [ ] feat: implement Strategy pattern
