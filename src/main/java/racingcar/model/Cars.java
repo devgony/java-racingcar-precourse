@@ -16,8 +16,6 @@ public class Cars {
     }
 
     public void add(Car car) {
-        System.out.println(this.cars);
-        System.out.println(car);
         this.cars.add(car);
     }
 
