@@ -56,3 +56,5 @@ jeong: --
 - [x] feat: implement iterator at Cars, Race{rolls(), Cars yieldWinner()}
 - [x] feat: implement Output.printCars(Cars)
 - [x] feat: implement Output.track() to draw tracks
+- [x] fix: modify default Spot.at from 1 to 0
+- [ ] add Exceptions

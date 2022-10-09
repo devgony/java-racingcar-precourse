@@ -10,7 +10,7 @@ public class Spot {
     }
 
     public Spot() {
-        this(1);
+        this(0);
     }
 
     public boolean isFartherThan(Spot candidate) {

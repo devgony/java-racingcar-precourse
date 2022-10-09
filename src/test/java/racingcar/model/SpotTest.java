@@ -8,7 +8,7 @@ public class SpotTest {
     @Test
     void defaultSpotShouldBe1() {
         Spot actual = new Spot();
-        Spot expected = new Spot(1);
+        Spot expected = new Spot(0);
         assertThat(actual).isEqualTo(expected);
     }
 
@@ -16,7 +16,7 @@ public class SpotTest {
     void shouldMove1() {
         Spot spot = new Spot();
         Spot actual = spot.move();
-        Spot expected = new Spot(2);
+        Spot expected = new Spot(1);
         assertThat(actual).isEqualTo(expected);
     }
 }
