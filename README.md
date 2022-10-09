@@ -28,3 +28,5 @@
 - [x] feat: implement Application logic
 - [x] fix: modify Input.parseCars -> parseNames to return String[]
 - [x] test: add case for ShouldConcatNamesWithComma
+- [x] feat: implement Cars {String names(), String separator(ListIterator<Car>)}
+- 

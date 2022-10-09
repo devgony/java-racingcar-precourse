@@ -2,6 +2,7 @@ package racingcar.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Objects;
 
 public class Cars {
@@ -58,5 +59,22 @@ public class Cars {
         return "Cars{" +
                 "cars=" + cars +
                 '}';
+    }
+
+    public String names() {
+        String result = "";
+        ListIterator<Car> it = this.cars.listIterator();
+        while (it.hasNext()) {
+            result += it.next().name();
+            result += separator(it);
+        }
+        return result;
+    }
+
+    private String separator(ListIterator<Car> it) {
+        if (it.hasNext()) {
+            return ",";
+        }
+        return "";
     }
 }
