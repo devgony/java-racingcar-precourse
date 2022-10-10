@@ -57,11 +57,11 @@ jeong: --
 - [x] feat: implement Output.printCars(Cars)
 - [x] feat: implement Output.track() to draw tracks
 - [x] fix: modify default Spot.at from 1 to 0
-- [x] refactor: rename scanNames to scanCars, add recursive trycatch to scanCars
+- [x] refactor: rename scanNames to scanCars, add recursive try-catch to scanCars
 - [x] fix: remove redundant case, modify default Spot from 1 to 0
 - [x] refactor: split Input.parseCars from Input.scanCars
 - [x] test: rename RollShouldMoveOrStay to RollWithRandomStrategyMoveOrStay, add RollsWithAlwaysWinStrategy
 - [x] test: add cases Input {parseCars, parseTryNumber}
 - [x] feat: implement GameResult {Spot maxSpot, Cars winners, GameResult addWinner(Car)}
 - [x] refactor: split yieldWinner to yieldFinalResult and yieldRoundResult
-- [ ] add Exceptions
+- [x] refactor: split main logic to controller.RaceApp
