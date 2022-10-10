@@ -1,11 +1,8 @@
 package racingcar.model;
 
 import org.junit.jupiter.api.Test;
-import racingcar.view.Input;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 

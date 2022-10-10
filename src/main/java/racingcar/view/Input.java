@@ -46,7 +46,7 @@ public class Input {
         }
     }
 
-    private static int parseTryNumber(String scanned) {
+    public static int parseTryNumber(String scanned) {
         try {
             return parseInt(scanned);
         } catch (Exception e) {

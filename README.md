@@ -61,4 +61,5 @@ jeong: --
 - [x] fix: remove redundant case, modify default Spot from 1 to 0
 - [x] refactor: split Input.parseCars from Input.scanCars
 - [x] test: rename RollShouldMoveOrStay to RollWithRandomStrategyMoveOrStay, add RollsWithAlwaysWinStrategy
+- [x] test: add cases Input {parseCars, parseTryNumber}
 - [ ] add Exceptions
