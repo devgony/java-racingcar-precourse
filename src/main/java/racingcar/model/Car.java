@@ -19,7 +19,7 @@ public class Car {
     private void validate(String name) {
         int length = name.length();
         if (length > 5) {
-            throw new IllegalArgumentException("name should be less than 5 but: " + length);
+            throw new IllegalArgumentException("[ERROR] name should be less than 5 but: " + length);
         }
 
     }
