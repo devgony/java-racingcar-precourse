@@ -19,16 +19,21 @@ public class Input {
     public static Cars scanCars() {
         try {
             Output.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
-            String[] names = parseNames(scan());
-            Cars cars = new Cars();
-            for (String name : names) {
-                cars.add(new Car(name));
-            }
-            return cars;
+            String scanned = scan();
+            return parseCars(scanned);
         } catch (IllegalArgumentException e) {
             Output.println(e.getMessage());
             return scanCars();
         }
+    }
+
+    public static Cars parseCars(String scanned) {
+        String[] names = parseNames(scanned);
+        Cars cars = new Cars();
+        for (String name : names) {
+            cars.add(new Car(name));
+        }
+        return cars;
     }
 
     public static int scanTryNumber() {
