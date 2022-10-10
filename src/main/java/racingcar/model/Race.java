@@ -4,8 +4,8 @@ public class Race {
     private final Cars cars;
     private final RollStrategy rollStrategy;
 
-    public Race(RandomStrategy randomStrategy, Cars cars) {
-        this.rollStrategy = randomStrategy;
+    public Race(RollStrategy rollStrategy, Cars cars) {
+        this.rollStrategy = rollStrategy;
         this.cars = cars;
     }
 
