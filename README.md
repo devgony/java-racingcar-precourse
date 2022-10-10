@@ -58,4 +58,5 @@ jeong: --
 - [x] feat: implement Output.track() to draw tracks
 - [x] fix: modify default Spot.at from 1 to 0
 - [x] refactor: rename scanNames to scanCars, add recursive trycatch to scanCars
+- [x] fix: remove redundant case, modify default Spot from 1 to 0
 - [ ] add Exceptions
