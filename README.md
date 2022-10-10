@@ -65,3 +65,4 @@ jeong: --
 - [x] feat: implement GameResult {Spot maxSpot, Cars winners, GameResult addWinner(Car)}
 - [x] refactor: split yieldWinner to yieldFinalResult and yieldRoundResult
 - [x] refactor: split main logic to controller.RaceApp
+- [x] refactor: gather magic number to Scale, literal string to Payload

@@ -2,15 +2,18 @@ package racingcar.model;
 
 import java.util.*;
 
+import static racingcar.util.Payload.EMPTY;
+import static racingcar.util.Payload.SEPARATOR;
+
 public class Cars implements Iterable<Car> {
     private List<Car> cars;
 
-    public Cars(List<Car> cars) {
-        this.cars = cars;
-    }
-
     public Cars() {
         this.cars = new ArrayList<>();
+    }
+
+    public Cars(List<Car> cars) {
+        this.cars = cars;
     }
 
     public void add(Car car) {
@@ -39,6 +42,27 @@ public class Cars implements Iterable<Car> {
         return winnerResult;
     }
 
+    public String names() {
+        String result = EMPTY;
+        ListIterator<Car> it = this.cars.listIterator();
+        while (it.hasNext()) {
+            result += it.next().name();
+            result += separator(it);
+        }
+        return result;
+    }
+
+    private String separator(ListIterator<Car> it) {
+        if (it.hasNext()) {
+            return SEPARATOR;
+        }
+        return EMPTY;
+    }
+
+    @Override
+    public Iterator<Car> iterator() {
+        return this.cars.iterator();
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -58,27 +82,5 @@ public class Cars implements Iterable<Car> {
         return "Cars{" +
                 "cars=" + cars +
                 '}';
-    }
-
-    public String names() {
-        String result = "";
-        ListIterator<Car> it = this.cars.listIterator();
-        while (it.hasNext()) {
-            result += it.next().name();
-            result += separator(it);
-        }
-        return result;
-    }
-
-    private String separator(ListIterator<Car> it) {
-        if (it.hasNext()) {
-            return ",";
-        }
-        return "";
-    }
-
-    @Override
-    public Iterator<Car> iterator() {
-        return this.cars.iterator();
     }
 }

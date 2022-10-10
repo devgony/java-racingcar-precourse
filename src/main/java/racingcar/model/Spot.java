@@ -2,6 +2,9 @@ package racingcar.model;
 
 import java.util.Objects;
 
+import static racingcar.util.Scale.MOVE_INCREASE;
+import static racingcar.util.Scale.MOVE_MIN;
+
 public class Spot {
     private int at;
 
@@ -10,7 +13,7 @@ public class Spot {
     }
 
     public Spot() {
-        this(0);
+        this(MOVE_MIN);
     }
 
     public boolean isFartherThan(Spot candidate) {
@@ -22,7 +25,7 @@ public class Spot {
     }
 
     public Spot move() {
-        return new Spot(this.at + 1);
+        return new Spot(this.at + MOVE_INCREASE);
     }
 
     @Override

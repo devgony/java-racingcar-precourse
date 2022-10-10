@@ -2,6 +2,10 @@ package racingcar.model;
 
 import java.util.Objects;
 
+import static racingcar.util.Payload.ERROR_NAME_LENGTH;
+import static racingcar.util.Scale.NAME_MAX_LENGTH;
+
+
 public class Car {
     private String name;
     private Spot spot;
@@ -18,8 +22,8 @@ public class Car {
 
     private void validate(String name) {
         int length = name.length();
-        if (length > 5) {
-            throw new IllegalArgumentException("[ERROR] name should be less than 5 but: " + length);
+        if (length > NAME_MAX_LENGTH) {
+            throw new IllegalArgumentException(ERROR_NAME_LENGTH + length);
         }
 
     }

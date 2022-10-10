@@ -13,14 +13,14 @@ public class Race {
         return this.rollStrategy.roll(car);
     }
 
-    public GameResult yieldFinalResult() {
-        return this.cars.yieldFinalResult();
-    }
-
     public void rolls() {
         for (Car car : this.cars) {
             roll(car);
         }
+    }
+
+    public GameResult yieldFinalResult() {
+        return this.cars.yieldFinalResult();
     }
 
     public Cars cars() {

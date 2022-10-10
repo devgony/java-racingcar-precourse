@@ -1,11 +1,12 @@
 package racingcar.model;
 
 import static camp.nextstep.edu.missionutils.Randoms.pickNumberInRange;
+import static racingcar.util.Scale.*;
 
 public class RandomStrategy implements RollStrategy {
     public RollResult roll(Car car) {
-        int number = pickNumberInRange(0, 9);
-        if (number < 4) {
+        int number = pickNumberInRange(MOVE_MIN, MOVE_MAX);
+        if (number < MOVE_BORDER) {
             return new RollResult(false, car);
         }
         car.move();

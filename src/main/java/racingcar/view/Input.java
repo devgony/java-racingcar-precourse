@@ -5,6 +5,7 @@ import racingcar.model.Cars;
 
 import static camp.nextstep.edu.missionutils.Console.readLine;
 import static java.lang.Integer.parseInt;
+import static racingcar.util.Payload.*;
 
 public class Input {
 
@@ -13,12 +14,12 @@ public class Input {
     }
 
     public static String[] parseNames(String scanned) {
-        return scanned.split("\\s*,\\s*");
+        return scanned.split(SPLIT_REGEXP);
     }
 
     public static Cars scanCars() {
         try {
-            Output.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
+            Output.println(NOTICE_CAR_NAMES);
             String scanned = scan();
             return parseCars(scanned);
         } catch (IllegalArgumentException e) {
@@ -38,7 +39,7 @@ public class Input {
 
     public static int scanTryNumber() {
         try {
-            Output.println("시도할 회수");
+            Output.println(NOTICE_TRY_NUMBER);
             return parseTryNumber(scan());
         } catch (IllegalArgumentException e) {
             Output.println(e.getMessage());
@@ -50,7 +51,7 @@ public class Input {
         try {
             return parseInt(scanned);
         } catch (Exception e) {
-            throw new IllegalArgumentException("[ERROR] 시도 횟수는 숫자여야 한다.");
+            throw new IllegalArgumentException(ERROR_TRY_NUMBER_TYPE);
         }
     }
 }
