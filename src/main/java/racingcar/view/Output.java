@@ -2,6 +2,7 @@ package racingcar.view;
 
 import racingcar.model.Car;
 import racingcar.model.Cars;
+import racingcar.model.GameResult;
 
 import java.util.Collections;
 
@@ -11,8 +12,8 @@ public class Output {
         System.out.println(payload);
     }
 
-    public static void printWinners(Cars winners) {
-        String names = winners.names();
+    public static void printWinners(GameResult gameResult) {
+        String names = gameResult.winners().names();
         println("최종 우승자 : " + names);
     }
 

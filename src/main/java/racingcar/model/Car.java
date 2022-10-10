@@ -24,6 +24,26 @@ public class Car {
 
     }
 
+    public Spot spot() {
+        return this.spot;
+    }
+
+    public boolean isFasterThan(Spot maxSpot) {
+        return this.spot.isFartherThan(maxSpot);
+    }
+
+    public boolean isAtIdenticalSpot(Spot maxSpot) {
+        return this.spot.isAtIdenticalSpot(maxSpot);
+    }
+
+    public void move() {
+        this.spot = this.spot.move();
+    }
+
+    public String name() {
+        return this.name;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -43,25 +63,5 @@ public class Car {
                 "name='" + name + '\'' +
                 ", spot=" + spot +
                 '}';
-    }
-
-    public Spot spot() {
-        return this.spot;
-    }
-
-    public boolean isFasterThan(Spot maxSpot) {
-        return this.spot.isFartherThan(maxSpot);
-    }
-
-    public boolean isAtIdenticalSpot(Spot maxSpot) {
-        return this.spot.isAtIdenticalSpot(maxSpot);
-    }
-
-    public void move() {
-        this.spot = this.spot.move();
-    }
-
-    public String name() {
-        return this.name;
     }
 }

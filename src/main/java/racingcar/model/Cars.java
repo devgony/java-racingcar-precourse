@@ -17,26 +17,28 @@ public class Cars implements Iterable<Car> {
         this.cars.add(car);
     }
 
-    public Cars yieldWinner() {
+    public GameResult yieldFinalResult() {
         Spot maxSpot = new Spot();
         Cars winners = new Cars();
-        for (Car car : cars
-        ) {
-            // Todo: car.isEqual()
-            if (car.isAtIdenticalSpot(maxSpot)) {
-                winners.add(car);
-                continue;
-            }
-            if (car.isFasterThan(maxSpot)) {
-                Cars cars = new Cars();
-                cars.add(car);
-                winners = cars;
-                // Todo: getter vs mutate outer context
-                maxSpot = car.spot();
-            }
+        GameResult winnerResult = new GameResult(maxSpot, winners);
+        for (Car car : cars) {
+            winnerResult = yieldRoundResult(car, winnerResult);
         }
-        return winners;
+        return winnerResult;
     }
+
+    private GameResult yieldRoundResult(Car car, GameResult winnerResult) {
+        if (car.isFasterThan(winnerResult.maxSpot())) {
+            Cars cars = new Cars();
+            cars.add(car);
+            return new GameResult(car.spot(), cars);
+        }
+        if (car.isAtIdenticalSpot(winnerResult.maxSpot())) {
+            winnerResult.addWinner(car);
+        }
+        return winnerResult;
+    }
+
 
     @Override
     public boolean equals(Object o) {

@@ -13,8 +13,8 @@ public class Race {
         return this.rollStrategy.roll(car);
     }
 
-    public Cars yieldWinner() {
-        return this.cars.yieldWinner();
+    public GameResult yieldFinalResult() {
+        return this.cars.yieldFinalResult();
     }
 
     public void rolls() {

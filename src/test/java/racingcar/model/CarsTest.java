@@ -21,7 +21,7 @@ public class CarsTest {
         Car loser = new Car("a", new Spot(1));
         Car winner = new Car("b", new Spot(2));
         Cars cars = new Cars(Arrays.asList(loser, winner));
-        Cars actual = cars.yieldWinner();
+        Cars actual = cars.yieldFinalResult().winners();
         Cars expected = new Cars(Arrays.asList(winner));
         assertThat(actual).isEqualTo(expected);
     }
@@ -32,7 +32,7 @@ public class CarsTest {
         Car winner1 = new Car("b", new Spot(2));
         Car winner2 = new Car("c", new Spot(2));
         Cars cars = new Cars(Arrays.asList(loser, winner1, winner2));
-        Cars actual = cars.yieldWinner();
+        Cars actual = cars.yieldFinalResult().winners();
         Cars expected = new Cars(Arrays.asList(winner1, winner2));
         assertThat(actual).isEqualTo(expected);
     }

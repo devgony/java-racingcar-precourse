@@ -1,6 +1,7 @@
 package racingcar;
 
 import racingcar.model.Cars;
+import racingcar.model.GameResult;
 import racingcar.model.Race;
 import racingcar.model.RandomStrategy;
 import racingcar.view.Input;
@@ -16,7 +17,7 @@ public class Application {
             race.rolls();
             Output.printCars(race.cars());
         }
-        Cars winners = race.yieldWinner();
-        Output.printWinners(winners);
+        GameResult gameResult = race.yieldFinalResult();
+        Output.printWinners(gameResult);
     }
 }

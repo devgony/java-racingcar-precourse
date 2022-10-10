@@ -62,4 +62,6 @@ jeong: --
 - [x] refactor: split Input.parseCars from Input.scanCars
 - [x] test: rename RollShouldMoveOrStay to RollWithRandomStrategyMoveOrStay, add RollsWithAlwaysWinStrategy
 - [x] test: add cases Input {parseCars, parseTryNumber}
+- [x] feat: implement GameResult {Spot maxSpot, Cars winners, GameResult addWinner(Car)}
+- [x] refactor: split yieldWinner to yieldFinalResult and yieldRoundResult
 - [ ] add Exceptions
