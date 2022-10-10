@@ -13,12 +13,12 @@ public class Output {
 
     public static void printWinners(Cars winners) {
         String names = winners.names();
-        println("최종 우승자: " + names);
+        println("최종 우승자 : " + names);
     }
 
     public static void printCars(Cars cars) {
         for (Car car : cars) {
-            println(car.name() + ": " + track(car.spot().at()));
+            println(car.name() + " : " + track(car.spot().at()));
         }
         println("");
     }
